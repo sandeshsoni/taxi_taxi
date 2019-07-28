@@ -21,4 +21,17 @@ defmodule FareEngine.FareTest do
     FareEngine.FareWithSurcharge.calculate_fare
   end
 
+  describe "long distance travel, same city" do
+
+    test "less vehicles less demand" do
+      # create 5 vehicles
+      # create 7 demands
+    end
+
+    test "more vehicles less demand" do
+      # create 10 vehicles
+      # create 6 demands
+    end
+  end
+
 end
