@@ -17,4 +17,8 @@ defmodule FareEngine.FareTest do
     # use self() pid to get message back to self as assert
   end
 
+  test "fare using Tasks" do
+    FareEngine.FareWithSurcharge.calculate_fare
+  end
+
 end

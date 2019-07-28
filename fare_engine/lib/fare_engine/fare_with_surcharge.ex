@@ -21,4 +21,14 @@ defmodule FareEngine.FareWithSurcharge do
         IO.puts "Fare after surcharge of #{surcharge}% will be #{fare} only"
     end
   end
+
+  def calculate_fare do
+    distance = 15
+    rate = 10
+    surcharge = Task.async(fn -> SurchargeCalculator.calculate(5,7) end)
+    res = distance * rate * ((100 + Task.await(surcharge)) / 100)
+    IO.puts "fare is #{res}"
+    res
+  end
+
 end

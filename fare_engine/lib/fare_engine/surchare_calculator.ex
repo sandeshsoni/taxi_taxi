@@ -14,6 +14,10 @@ defmodule FareEngine.SurchargeCalculator do
     end
   end
 
+  def calculate(demand, supply) do
+    surcharge(demand, supply)
+  end
+
   # vehicles around
   # % of surcharge to add
   defp surcharge(demand, vehicles) when (demand - vehicles) > 10 do
